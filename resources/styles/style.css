@@ -25,9 +25,20 @@ footer {
     color: white;
     background-color: #1149d7;
     text-align: center;
-    padding: 10px 0;
+    padding: 100px 0;
 }
-
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width:1200px ;
+    margin: 0 auto;
+}
+.informacion{
+    flex: 1;
+    margin: 0 10xp;
+}
 button {
     font-size: 16px;
     font-weight: bold;
@@ -58,21 +69,30 @@ button {
 
 
 #logoT {
-    height: 60px;
+    height: 100px;
 }
 img {
     max-width: 100%;
 
 }
-.container-items{
+.featured-products{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200xp;
+    margin: 0 auto;
+    background-color: rgb(213, 244, 244);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  
 }
 
-.item{
-    border-radius: 10px;
-   
+.item img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .item:hover{
@@ -114,6 +134,7 @@ img {
     font-size: 18px;
     font-weight: 900;
 }
+
 .Info-produc button{
     border: none;
     background: none;
@@ -122,4 +143,17 @@ img {
     padding: 15px 10px;
     cursor: pointer;
 
+}
+
+#logo_wp{
+    height: 80px;
+}
+
+#pago_seguro{
+    height: 100px;
+}
+    
+.informacion {
+    text-align: left;
+    margin: 5px 10px;
 }
