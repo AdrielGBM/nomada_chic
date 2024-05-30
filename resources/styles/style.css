@@ -56,19 +56,70 @@ button {
     padding: 20px;
 }
 
-.product-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.product-grid .product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: calc(33.333% - 20px);
-    box-sizing: border-box;
-}
 
 #logoT {
     height: 60px;
+}
+img {
+    max-width: 100%;
+
+}
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+   
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgb(0,0, 0.20);
+}
+
+.Info-produc{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#p1{
+    height: 80px;
+}
+
+
+#p2{
+    height: 80px;
+}
+
+
+#p3{
+    height: 80px;
+}
+
+#p4{
+    height: 80px;
+}
+.item figure{
+    overflow: hidden;
+}
+.item:hover img{
+    transform: scale(1.2);
+}
+.precio{
+    font-size: 18px;
+    font-weight: 900;
+}
+.Info-produc button{
+    border: none;
+    background: none;
+    background-color: rgb(53, 50, 50);
+    color: aliceblue;
+    padding: 15px 10px;
+    cursor: pointer;
+
 }
