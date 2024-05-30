@@ -59,8 +59,9 @@ button {
 
 .banner {
     background-size: cover;
-    padding: 100px 0;
+    padding:20px 0;
     text-align: center;
+    position: relative;
 }
 
 .featured-products {
