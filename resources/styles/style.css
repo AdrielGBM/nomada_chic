@@ -1,10 +1,10 @@
 * {
-    color: black;
     text-decoration: none;
     box-sizing:border-box;
 }
 
 body {
+    min-width: 1000px;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -15,30 +15,55 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 48px;
     font-size: 20px;
     font-weight: bold;
     border-bottom:1px solid #333;
 }
 
+main {
+    padding: 48px;
+}
+
+.banner {
+    background-size: cover;
+    padding:20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200xp;
+    margin: 0 auto;
+    background-color: rgb(213, 244, 244);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  
+}
+
 footer {
     color: white;
-    background-color: #1149d7;
+    background-color: #004AAD;
     text-align: center;
-    padding: 100px 0;
+    padding: 48px 48px 12px 48px;
 }
-.footer-content{
+
+.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
-    max-width:1200px ;
-    margin: 0 auto;
 }
-.informacion{
-    flex: 1;
-    margin: 0 10xp;
+    
+.informacion {
+    text-align: left;
+    margin: 0px 32px;
 }
+
 button {
     font-size: 16px;
     font-weight: bold;
@@ -57,37 +82,23 @@ button {
     border: none;
 }
 
-.banner {
-    background-size: cover;
-    padding:20px 0;
-    text-align: center;
-    position: relative;
+img {
 }
 
-.featured-products {
-    padding: 20px;
+.icon {
+    height: 32px;
 }
-
 
 #logoT {
-    height: 100px;
+    height: 80px;
 }
-img {
-    max-width: 100%;
 
+#logo-webpay {
+    max-height: 64px;
 }
-.featured-products{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    padding: 20px;
-    width: 90%;
-    max-width: 1200xp;
-    margin: 0 auto;
-    background-color: rgb(213, 244, 244);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-  
+
+#pago-seguro {
+    height: 96px;
 }
 
 .item img{
@@ -96,11 +107,11 @@ img {
     border-radius: 8px;
 }
 
-.item:hover{
+.item:hover {
     box-shadow: 0 10px 20px rgb(0,0, 0.20);
 }
 
-.Info-produc{
+.Info-produc {
     padding: 15px 30px;
     line-height: 2;
     display: flex;
@@ -108,35 +119,36 @@ img {
     gap: 10px;
 }
 
-#p1{
+#p1 {
     height: 80px;
 }
 
-
-#p2{
+#p2 {
     height: 80px;
 }
 
-
-#p3{
+#p3 {
     height: 80px;
 }
 
-#p4{
+#p4 {
     height: 80px;
 }
-.item figure{
+
+.item figure {
     overflow: hidden;
 }
-.item:hover img{
+
+.item:hover img {
     transform: scale(1.2);
 }
-.precio{
+
+.precio {
     font-size: 18px;
     font-weight: 900;
 }
 
-.Info-produc button{
+.Info-produc button {
     border: none;
     background: none;
     background-color: rgb(53, 50, 50);
@@ -146,15 +158,6 @@ img {
 
 }
 
-#logo_wp{
-    height: 80px;
-}
-
-#pago_seguro{
+#pago_seguro {
     height: 100px;
-}
-    
-.informacion {
-    text-align: left;
-    margin: 5px 10px;
 }
