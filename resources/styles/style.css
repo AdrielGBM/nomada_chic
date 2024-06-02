@@ -8,13 +8,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #F1E5D1;
 }
 
 header {
     height: 100px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px #98707040;
+    background-color: #F1E5D1;
 }
 
 .common-header {
@@ -43,7 +45,8 @@ main {
 #featured-products {
     padding: 12px 28px 28px 28px;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px #98707040;
+    color: #987070;
 }
 
 .featured-products {
@@ -71,10 +74,11 @@ main {
 }
 
 footer {
-    color: white;
-    background-color: #004AAD;
     text-align: center;
     padding: 48px 48px 12px 48px;
+    color: #F1E5D1;
+    background-color: #987070;
+    box-shadow: 0 0 10px #98707040;
 }
 
 .footer-content {
@@ -97,17 +101,20 @@ button {
 }
 
 .white_button {
-    background-color: white;
+    color: #987070;
+    border-color: #987070;
+    background-color: transparent;
 }
 
 .blue_button {
-    color: white;
-    background-color: #004AAD;
+    color: #F1E5D1;
+    background-color: #987070;
     border: none;
 }
 
 .icon {
     height: 32px;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(3%) saturate(1822%) hue-rotate(336deg) brightness(124%) contrast(89%);
 }
 
 .product-image {
@@ -132,8 +139,8 @@ button {
 #pago-seguro {
     height: 96px;
 }
+
 .login-pagina {
-    background-color: rgb(65, 65, 249);
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -147,20 +154,17 @@ body.login {
 }
 
 .formulario{
-    color:white;
+    padding: 12px 28px 28px 28px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #98707040;
+    color:#987070;
 }
+
 input {
-    border: 2px solid #000; 
-    border-radius: 4px;   
+    border: 2px solid #C39898; 
+    border-radius: 20px;   
     padding: 8px;          
     width: 100%;          
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    background-color: transparent;
 }
-/* Centrar formulario de registro */
-
-.registro-usuario{
-    background-color: rgb(65, 65, 249);
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
