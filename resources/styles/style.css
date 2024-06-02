@@ -122,3 +122,13 @@ img {
 #pago-seguro {
     height: 96px;
 }
+body.login-pagina {
+    background-color: blue;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+body.login {
+    padding: 20px;
+}
