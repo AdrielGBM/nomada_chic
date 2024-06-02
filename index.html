@@ -6,6 +6,40 @@
     <title>Nómada Chic</title>
     <link rel="stylesheet" href="./resources/styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .featured-products {
+    display: flex;  /* Esta era la clave para el error */
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: center;
+}
+
+.container-items {
+    flex: 1 1 calc(33.333% - 20px); /* Ocupa un tercio del ancho del contenedor principal menos el espacio */
+    box-sizing: border-box;
+    margin: 10px 0; /* Ajusta según sea necesario */
+    display: flex;  /* Esta era la clave para el error */
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff; /* Fondo blanco para cada item */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para cada item */
+    flex: 1;  /* Esta era la clave para el error */
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+}
+    </style>
 </head>
 <body>
     <header>
@@ -31,7 +65,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure  class="product-image">
-                            <img src="./resources/img/banano_cuero_Tratur.png" alt="">
+                            <img src="./resources/img/banano_cuero_Tratur.png" alt="Banano de cuero">  
                         </figure>  
                         <div class="info-product">
                             <p> Banano de cuero </p>
@@ -43,7 +77,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure  class="product-image">
-                            <img src="./resources/img/Mochila_cabina.png" alt="">
+                            <img src="./resources/img/Mochila_cabina.png" alt="Mochila de cabina">
                         </figure>  
                         <div class="info-product">
                             <p> Mochila de cabina </p>
@@ -55,7 +89,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Mochila_cuero_unisex.png" alt="">
+                            <img src="./resources/img/Mochila_cuero_unisex.png" alt="Mochila de cuero unisex">
                         </figure>  
                         <div class="info-product">
                             <p> Mochila de cuero unisex </p>
@@ -67,7 +101,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Mochila_Lapto.png" alt="">
+                            <img src="./resources/img/Mochila_Lapto.png" alt="Mochila laptop">
                         </figure>  
                         <div class="info-product">
                             <p> Mochila laptop</p>
@@ -79,7 +113,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Banano casual negro.png" alt="">
+                            <img src="./resources/img/Banano casual negro.png" alt="Banano casual negro">
                         </figure>  
                         <div class="info-product">
                             <p>Banano casual negro</p>
@@ -91,7 +125,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Mochila senderismo.png" alt="">
+                            <img src="./resources/img/Mochila senderismo.png" alt="Mochila de senderismo">
                         </figure>  
                         <div class="info-product">
                             <p> Mochila de senderismo</p>
@@ -103,7 +137,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Bolso de viaje.png" alt="">
+                            <img src="./resources/img/Bolso de viaje.png" alt="Bolso de viaje">
                         </figure>  
                         <div class="info-product">
                             <p> Bolso de viaje</p>
@@ -115,7 +149,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Bolso con ruedas.png" alt="">
+                            <img src="./resources/img/Bolso con ruedas.png" alt="Bolso con ruedas">
                         </figure>  
                         <div class="info-product">
                             <p> Bolso con ruedas</p>
@@ -127,7 +161,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Mochila Etnica.png" alt="">
+                            <img src="./resources/img/Mochila Etnica.png" alt="Mochila Étnica">
                         </figure>  
                         <div class="info-product">
                             <p> Mochila Étnica</p>
@@ -139,7 +173,7 @@
                 <div class= "container-items">
                     <div class="item">
                         <figure class="product-image">
-                            <img src="./resources/img/Mochila tactica.png" alt="">
+                            <img src="./resources/img/Mochila tactica.png" alt="Mochila Táctica">
                         </figure>  
                         <div class="info-product">
                             <p> Mochila Táctica</p>
