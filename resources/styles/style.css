@@ -145,4 +145,22 @@ body.login {
 #login-header img {
     text-align: center;
 }
-  
+
+.formulario{
+    color:white;
+}
+input {
+    border: 2px solid #000; 
+    border-radius: 4px;   
+    padding: 8px;          
+    width: 100%;          
+    box-sizing: border-box; 
+}
+/* Centrar formulario de registro */
+
+.registro-usuario{
+    background-color: rgb(65, 65, 249);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+

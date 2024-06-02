@@ -7,46 +7,38 @@
     <title>registrarse</title>
 </head>
 <body>
-    <header>
+    <header class="login-header">
         <img id="logoT" src="./resources/img/logo.png">
-        <a href="catalog.html">Productos <i class="material-icons">keyboard_arrow_down</i></a>
-        <a href="cart.html">Carrito</a>
-        <div>
-            <a href="registrarse.html">
-                <button id="register" class="white_button">Registrarse</button>
-            </a>
-            <a href="login.html">
-                <button id="login" class="blue_button">Iniciar sesión</button>
-            </a>
-        </div>
     </header>
-    <h1> Registro de usuarios</h1>
-    
- <div>
-    <form>
-        <label for="run"> Ingrese R.U.N.:</label><br>
-        <input type ="number"  id="run" placeholder="Ingrese su R.U.N." required ><br>
-        <label for="nombre"> Ingrese Nombre:</label><br>
-        <input type ="text"  id="nombre" placeholder="Ingrese su nombre" required><br>
-        <label for="apellido"> Ingrese Apellido:</label><br>
-        <input type ="text"  id="apellido" placeholder="Ingrese su apellido" required ><br>
-        <label> Sexo: </label><br>
-        <input type="radio" name=" sexo"> Femenino<br>
-        <input type="radio" name=" sexo"> Masculino<br>
-        <label> Fecha de Nacimiento: </label><br>
-        <input type="date"><br>
-        <label for="contrasena"> Contraseña: </label><br>
-        <input type="password" required><br>
-        <label> Ingrese E mail: </label><br>
-        <input type="email" required><br>    
-        <p> Estoy de acuerdo con <a href="#"> Términos y condiciones</a></p>
-        <input type="submit" value="Registrar">
-        <p><a href="./login.html"> Ya tengo cuenta?</a></p>
+    <main class="registro-usuario">
+        <div class = "formulario">
+            <h1> Registro</h1>
+            <p> Crea tú cuenta completando los siguientes datos </p> <br>
+            
+            <form method="post">
+                <div class="nombre">
+                <label for="nombre"> Nombre completo:</label><br>
+                <input type ="text"  id="nombre" placeholder="Mr/Miss Cartera" required><br>
+                </div>
+                <div class="Email"></div>
+                <label> Ingrese E mail: </label><br>
+                <input type="email" placeholder="Ingresa@tuemail.com" ><br>  
+        
+                <div class="contrasena">
+                    <label> Contraseña </label><br>
+                    <input type="password"placeholder="Introduce acá tú contraseña" required>
+                </div>
+                <br>
+            
+                <p> Estoy de acuerdo con <a href="#"> Términos y condiciones</a></p>
+                <input type="submit" value="Crear cuenta">
+                <p> Ya tienes tú cuenta?<a href="./login.html"> Iniciar sesión?</a></p>
 
-    </form>
+            </form>    
     
-</div>
-
+        </div>
+        </main>
+    </main>
 
 </body>
 </html>
