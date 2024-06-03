@@ -1,11 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
+    <title>Nómada Chic</title>
+    <link rel="stylesheet" href="./resources/styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
-    
+<body class="light-body">
+    <header class="common-header">
+        <a href="index.html">
+            <img id="logoT" src="./resources/img/dark-logo.png">
+        </a>
+        <a class="no-underline" href="catalog.html">Productos <i class="material-icons">keyboard_arrow_down</i></a>
+        <a class="no-underline" href="cart.html">Carrito</a>
+        <div>
+            <a href="registrarse.html">
+                <button id="register" class="white_button">Registrarse</button>
+            </a>
+            <a href="login.html">
+                <button id="login" class="blue_button">Iniciar sesión</button>
+            </a>
+        </div>
+    </header>
+    <main class="cart">
+        <section id="products-on-cart" class="light-background">
+            <h2>Carrito de Compras</h2>
+            <div class="info-cart-product">
+                <div>
+                    <p class="cart-info">Producto</p>
+                </div>
+                <div class="info-cart-product">
+                    <p class="cart-info">Precio</p>
+                    <p class="cart-info">Cantidad</p>
+                    <p class="cart-info">Subtotal</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                </div>
+            </div>  
+            <div>
+                <hr style="border: 1px solid #987070;">
+            </div>
+            <div class="products-on-cart">
+                <div class= "container-items">
+                    <div class="cart-item">
+                        <figure class="product-image">
+                            <img class="cart-image" src="./resources/img/banano_cuero_Tratur.png" alt="Banano de cuero">  
+                        </figure>  
+                        <div class="info-cart-product">
+                            <div>
+                                <p class="cart-product-name"> Banano de cuero </p>
+                            </div>
+                            <div class="info-cart-product">
+                                <p class="cart-info">$20.990</p>
+                                <p class="cart-info">- 01 +</p>
+                                <p class="cart-info">$20.990</p>
+                                <img class="dark-icon" src="./resources/img/Basurero.png" alt="Borrar">
+                            </div>
+                        </div>                      
+                    </div>
+                </div>
+                <div class= "container-items">
+                    <div class="cart-item">
+                        <figure class="product-image">
+                            <img class="cart-image" src="./resources/img/Mochila_cabina.png" alt="Mochila de cabina">
+                        </figure>  
+                        <div class="info-cart-product">
+                            <div>
+                                <p class="cart-product-name"> Mochila de cabina </p>
+                            </div>
+                            <div class="info-cart-product">
+                                <p class="cart-info">$18.990</p>
+                                <p class="cart-info">- 02 +</p>
+                                <p class="cart-info">$37.980</p>
+                                <img class="dark-icon" src="./resources/img/Basurero.png" alt="Borrar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="products-on-cart" class="dark-background">
+            <h2>Resumen de la compra</h2>
+            <div class="space-between-p">
+                <p>
+                    Subtotal
+                </p>
+                <p>
+                    $60.970
+                </p>
+            </div>
+            <div class="space-between-p">
+                <p>
+                    Costo de envío
+                </p>
+                <p>
+                    $3.000
+                </p>
+            </div>
+            <div>
+                <hr style="border: 1px solid #F1E5D1">
+            </div>
+            <div class="space-between-p">
+                <p>
+                    Total
+                </p>
+                <p>
+                    $63.970
+                </p>
+            </div>
+            <a href="purchase.html">
+                <button id="purchase" class="light-button">Completar pago</button>
+            </a>
+        </section>
+    </main>
+    <footer class="common-footer">
+        <div class="footer-content">
+            <div class="informacion">
+                <h3>CONTACTO</h3>
+                <P>Avenida Las Condes Nro. 5000</P>
+                <p>+56 9 1234 5678</p>
+                <p>nomadechic@gmail.com</p>
+            </div>
+            <div class="informacion">
+                <h3>REDES SOCIALES</h3>
+                <img class="icon" src="./resources/img/Instagram.png" alt="Instagram">
+                <img class="icon" src="./resources/img/Facebook.png" alt="Facebook">
+                <img class="icon" src="./resources/img/X.png" alt="X">
+            </div>
+            <div class="informacion">
+                <h3> METODOS DE PAGO</h3>
+                <img id="logo-webpay" src="./resources/img/Webpay.png" alt="Webpay">
+            </div>
+            <div class="informacion">
+                <img id="pago-seguro" src="./resources/img/pago seguro.png" alt="Pago seguro">
+            </div>
+        </div>
+            
+    <p>
+        &copy; NomadaChic.com<br><br>
+        Tienda online de venta de bolsos y mochilas.
+    </p>
+    </footer>
 </body>
 </html>

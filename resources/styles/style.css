@@ -7,6 +7,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .light-body {
@@ -38,10 +40,8 @@ header {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 96px;
+    align-items: start;
+    padding: 48px;
 }
 
 #banner {
@@ -54,6 +54,7 @@ main {
     border-radius: 20px;
     box-shadow: 0 0 10px #98707040;
     color: #987070;
+    margin: 48px;
 }
 
 .featured-products {
@@ -113,6 +114,13 @@ button {
     background-color: transparent;
 }
 
+.light-button {
+    width: 100%;
+    color: #987070;
+    background-color: #F1E5D1;
+    border: none;
+}
+
 .blue_button {
     color: #F1E5D1;
     background-color: #987070;
@@ -122,6 +130,11 @@ button {
 .icon {
     height: 32px;
     filter: brightness(0) saturate(100%) invert(78%) sepia(3%) saturate(1822%) hue-rotate(336deg) brightness(124%) contrast(89%);
+}
+
+.dark-icon {
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(10%) saturate(970%) hue-rotate(314deg) brightness(98%) contrast(90%);
 }
 
 .product-image {
@@ -148,6 +161,9 @@ button {
 }
 
 .login-pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -191,4 +207,79 @@ a {
 
 .no-underline {
     text-decoration: none;
+}
+
+.cart {
+    display: flex;
+    flex-direction: row;
+}
+
+#products-on-cart {
+    padding: 12px 28px 28px 28px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #98707040;
+    margin: 48px;
+}
+
+.products-on-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-image {
+    height: 100px;
+    border-radius: 20px;
+}
+
+.cart-item:hover img {
+    transform: scale(1.2);
+}
+
+.info-cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.light-background {
+    color: #987070;
+    background-color: #F1E5D1;
+    width: 70%;
+}
+
+.dark-background {
+    color: #F1E5D1;
+    background-color: #987070;
+    width: 30%;
+}
+
+.space-between-p {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-info {
+    font-size: 18px;
+    font-weight: 900;
+    width: 120px;
+}
+
+.cart-product-name {
+    font-size: 18px;
+    font-weight: 900;
+    width: 228px;
+    text-align: start;
 }
