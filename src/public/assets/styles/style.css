@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  font-family: Catamaran;
+  text-decoration: none;
+  margin: 0px
+}
+  
+body {
+  min-height: 100vh;
+  min-width: 360px;
+  height: 100%;
+  width: 100%;
+}
+  
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.item {
+  justify-self: center;
+}
+
+.container {
+  gap: 32px
+}
+
+.container-product {
+  gap: 12px
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.border {
+  padding: 12px 20px;
+  border: 2px solid #987070;
+  border-radius: 20px;
+}
+
+.shadow {
+  box-shadow: 0 0 10px #98707040;
+}
+
+.large-size {
+  width: 100%;
+}
+
+.medium-size {
+  height: 60px;
+}
+
+.product {
+  border-radius: 20px;
+  height: 180px;
+  width: 180px;
+}
+
+.product:hover {
+  scale: 1.1
+}
+
+.large-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.medium-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: 16px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.nowrap-text {
+  white-space: nowrap;
+}
+
+.header-padding {
+  padding: 12px 48px;
+}
+
+.large-padding {
+  padding: 48px;
+}
+
+.vertical-padding {
+  padding: 12px 0px;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.primary {
+  background-color: #F1E5D1;
+  color: #987070;
+}
+
+.secondary {
+  background-color: #987070;
+  color: #F1E5D1;
+}
+
+.textfield {
+  width: 50%;
+  cursor: text;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: #987070;
+  opacity: 1;
+}
+
+@media (max-width: 1080px) {
+  .large-padding {
+    padding: 12px 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .large-padding {
+    padding: 12px 24px;
+  }
+
+  .container {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hide {
+      display: none;
+  }
+
+  .large-padding {
+    padding: 12px 12px;
+  }
+
+  .container {
+    gap: 12px;
+  }
+}

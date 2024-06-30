@@ -1,0 +1,18 @@
+{
+  "name": "nomada_chic",
+  "version": "1.0.0",
+  "description": "Minimun viable product of a bag store",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "author": "AdSeVi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
