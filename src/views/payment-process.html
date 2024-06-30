@@ -3,14 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head-component></head-component>
-    <script src="components/head.js"></script>
+    <title>Nómada Chic</title>
+        
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/icon/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Catamaran'>
     <script src="https://kit.fontawesome.com/5220de64b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles/style.css"/>
 </head>
 <body class="secondary">
     <simple-header-component></simple-header-component>
     <main class="column large-padding center">
-        Aquí el formulario
+        <div class="grid-two-one container large-size">
+            <div class="column container padding border shadow primary">
+                <p class="large-text center-text">Datos personales</p>
+                <form class="column container large-size">
+                    <div class="column container-product">
+                        <label>Nombre completo</label>
+                        <label class="row container center border primary textfield large-size" for="name">
+                            <input id="name" type="text" class="small-text primary" placeholder="Nombre completo"/>
+                        </label>
+                    </div>
+                    <div class="column container-product">
+                        <label>Contacto</label>
+                        <label class="row container center border primary textfield large-size" for="number">
+                            <input id="number" type="number" class="small-text primary" placeholder="Número telefónico"/>
+                        </label>
+                    </div>
+                    <div class="column container-product">
+                        <label>Dirección de envío</label>
+                        <label class="row container center border primary textfield large-size" for="region">
+                            <input id="region" type="text" class="small-text primary" placeholder="Región"/>
+                        </label>
+                        <label class="row container center border primary textfield large-size" for="commune">
+                            <input id="commune" type="text" class="small-text primary" placeholder="Comuna"/>
+                        </label>
+                        <label class="row container center border primary textfield large-size" for="address">
+                            <input id="address" type="text" class="small-text primary" placeholder="Dirección"/>
+                        </label>
+                        <label class="row container center border primary textfield large-size" for="department">
+                            <input id="department" type="text" class="small-text primary" placeholder="Departamento, casa, etc (opcional)"/>
+                        </label>
+                    </div>
+                    <a class="border medium-text center-text secondary large-size">Guardar cambios</a>
+                </form>
+            </div>
+            <div class="column container padding border shadow primary">
+                <p class="large-text center-text">Datos de pago</p>
+                <div class="column center">
+                    <img class="medium-size" src="assets/images/webpay.png" alt="Webpay">
+                </div>
+                <form class="column container large-size">
+                    <div class="column container-product">
+                        <label>Número de la tarjeta</label>
+                        <label class="row container center border primary textfield large-size" for="card-number">
+                            <input id="card-number" type="number" class="small-text primary" placeholder="xxxx-xxxx-xxxx-xxxx"/>
+                        </label>
+                    </div>
+                    <div class="column container-product">
+                        <label>Fecha de vencimiento</label>
+                        <label class="row container center border primary textfield large-size" for="due-date">
+                            <input id="due-date" type="month" class="small-text primary"/>
+                        </label>
+                    </div>
+                    <div class="column container-product">
+                        <label>CVV</label>
+                        <label class="row container center border primary textfield large-size" for="cvv">
+                            <input id="cvv" type="number" class="small-text primary" placeholder="123"/>
+                        </label>
+                    </div>
+                    <div class="row container-product">
+                        <input type="checkbox" class="small-size primary"/>
+                        <p class="small-text">Guardar los datos para futuras compras.</p>
+                    </div>
+                    <p class="large-text right-text">Total: $54.990</p>
+                    <a class="border medium-text center-text secondary large-size" href="/transaction">Completar pago</a>
+                </form>
+            </div>
+        </div>
     </main>
     <footer-component></footer-component>
 

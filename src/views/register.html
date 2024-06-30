@@ -3,14 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head-component></head-component>
-    <script src="components/head.js"></script>
+    <title>Nómada Chic</title>
+        
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/icon/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Catamaran'>
     <script src="https://kit.fontawesome.com/5220de64b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles/style.css"/>
 </head>
 <body class="secondary">
     <simple-header-component></simple-header-component>
     <main class="column large-padding center">
-        Aquí el formulario
+        <div class="column container center padding border shadow primary max-size">
+            <p class="large-text center-text">Registro</p>
+            <p class="small-text">Crea tu cuenta <b>Nómada Chic</b>.</p>
+            <form class="column container large-size">
+                <div class="column container-product">
+                    <label>Nombre completo</label>
+                    <label class="row container center border primary textfield large-size" for="name">
+                        <input id="name" type="text" class="small-text primary" placeholder="Nombre Apellido"/>
+                    </label>
+                </div>
+                <div class="column container-product">
+                    <label>Correo electrónico</label>
+                    <label class="row container center border primary textfield large-size" for="email">
+                        <input id="email" type="email" class="small-text primary" placeholder="nombre.apellido@gmail.cl"/>
+                    </label>
+                </div>
+                <div class="column container-product">
+                    <label>Contraseña</label>
+                    <label class="row container center border primary textfield large-size" for="password">
+                        <input id="password" type="password" class="small-text primary" placeholder="************"/>
+                    </label>
+                </div>
+                <div class="row container-product center">
+                    <input type="checkbox" class="small-size primary"/>
+                    <p class="small-text">Estoy de acuerdo con los <b>términos y condiciones</b>.</p>
+                </div>
+                <a class="border medium-text center-text secondary large-size" href="/">Registrarse</a>
+            </form>
+            <div class="row container-product">
+                <p class="small-text">¿Ya tienes cuenta?</p>
+                <a class="medium-text primary" href="/login">Iniciar sesión</a>
+            </div>
+        </div>
     </main>
     <footer-component></footer-component>
 

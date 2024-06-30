@@ -8,7 +8,7 @@ class MainHeader extends HTMLElement {
                     <img class="medium-size" src="assets/images/dark-logo.png">
                 </a>
             </div>
-            <label class="row container center border primary textfield" for="search-bar">
+            <label class="row container center border large-product primary textfield" for="search-bar">
                 <input id="search-bar" type="text" class="small-text primary" placeholder="Buscar..."/>
                 <a class="primary" href="/search">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -19,6 +19,9 @@ class MainHeader extends HTMLElement {
                     <a class="border medium-text nowrap-text primary" href="/register">Registrarse</a>
                     <a class="border medium-text nowrap-text secondary" href="/login">Iniciar sesión</a>
                 </div>
+                <a class="primary" href="/shopping-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
                 <i class="fa-solid fa-bars large-text"></i>
             </div>
         </header>

@@ -3,14 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head-component></head-component>
-    <script src="components/head.js"></script>
+    <title>Nómada Chic</title>
+        
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/icon/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Catamaran'>
     <script src="https://kit.fontawesome.com/5220de64b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles/style.css"/>
 </head>
 <body class="primary">
     <main-header-component></main-header-component>
     <main class="column large-padding center">
-        Aquí los resultados de la búsqueda
+        <div class="grid-one-four container large-size">
+            <div class="column container padding border shadow primary">
+                <p class="large-text">Búsqueda avanzada</p>
+                <form class="column container large-size">
+                    <div class="column container-product">
+                        <label class="medium-text">Tipo de producto</label>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Bananos</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Bolsos</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Carteras</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Mochilas</p>
+                        </div>
+                    </div>
+                    <div class="column container-product">
+                        <label class="medium-text">Material</label>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Cuero</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Piel sintética</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Tela</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Vinilo</p>
+                        </div>
+                    </div>
+                    <div class="column container-product">
+                        <label class="medium-text">Valor</label>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Menos de $10.000</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">De $10.000 hasta $24.999</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">De $25.000 hasta $39.999</p>
+                        </div>
+                        <div class="row container-product">
+                            <input type="checkbox" class="small-size primary"/>
+                            <p class="small-text">Más de $40.000</p>
+                        </div>
+                    </div>
+                    <a class="border medium-text center-text secondary large-size">Buscar productos</a>
+                </form>
+            </div>
+            <div class="column container-product padding border shadow primary">
+                <p class="large-text">Productos</p>
+                <div class="row wrap container center padding primary">
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                    <a class="column container-product center primary" href="/detail">
+                        <img class="product" src="assets/images/products/product-1.png">
+                        <p class="medium-text">Mochila laptop</p>
+                        <p class="large-text">$54.990</p>
+                        <button class="border medium-text nowrap-text secondary">Añadir al carrito</button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer-component></footer-component>
 
