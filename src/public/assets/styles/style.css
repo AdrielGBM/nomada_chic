@@ -103,6 +103,12 @@ body {
   width: 180px;
 }
 
+.small-product {
+  border-radius: 20px;
+  height: 90px;
+  width: 90px;
+}
+
 .product:hover {
   scale: 1.1
 }
@@ -119,6 +125,10 @@ body {
 
 .small-text {
   font-size: 16px;
+}
+
+.product-text {
+  width: 90px;
 }
 
 .center-text {

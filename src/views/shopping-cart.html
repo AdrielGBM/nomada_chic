@@ -20,50 +20,50 @@
     <main class="column large-padding center">
         <div class="grid-two-one container large-size">
             <div class="column container large-padding padding border shadow primary">
-                <p class="large-text left-text">CARRITO DE COMPRAS</p>
-                <form class="column container medium-text">
-                    <div class=" row wrap container space shadow">
-                        <label>PRODUCTO</label>
-                        <label>PRECIO</label>
-                        <label>CANTIDAD</label>
-                        <label>SUBTOTAL</label>
+                <p class="large-text left-text">Carrito de compras</p>
+                <div class="column container-product medium-text">
+                    <div class="row container-product space border shadow">
+                        <p class="product-text">Producto</p>
+                        <p class="right-text">Precio</p>
+                        <p class="right-text">Cantidad</p>
+                        <p class="right-text">Sub-Total</p>
+                        <i class= "fa-solid fa-trash-can"></i>
                     </div>
-                    <div class="container shadow">   
-                        <div class=" row wrap space ">   
-                                              
-                        <img class="product" src="assets/images/products/product-1.png" alt="Producto">
-                        <label>$54.990</label>
-                        <div class="small-text secundary " > 
-                        <input type="number" value="0" min="0" max="10" id="quantity-input">
+                    <div class="row container space border shadow">
+                        <img class="small-product" src="assets/images/products/product-1.png" alt="Producto">
+                        <p class="center-text">$54.990</p>
+                        <div>
+                            <input type="number" class="medium-text center-text primary" value="1" min="1" max="24">
                         </div>
-                        <label>$54.990</label>
-                        
-                        </div>
-                    <a class="primary right-text">
-                                               <i class= "fa-solid fa-trash-can"></i>
-                    </a>
+                        <p class="center-text">$54.990</p>
+                            <i class= "fa-solid fa-trash-can"></i>
                     </div>
-                                                  
-                </form>
+                    <div class="row container space border shadow">
+                        <img class="small-product" src="assets/images/products/product-1.png" alt="Producto">
+                        <p class="center-text">$54.990</p>
+                        <div>
+                            <input type="number" class="medium-text center-text primary" value="1" min="1" max="24">
+                        </div>
+                        <p class="center-text">$54.990</p>
+                            <i class= "fa-solid fa-trash-can"></i>
+                    </div>                    
+                </div>
             </div>
             <div class="column container padding border shadow secondary">
                 <p class="large-text center-text">Resumen de compra</p>
-                
-                    <div class="column large-text space-between-p">
-                        
-                        <p>Sub-Total</p>
-                        <p class="right-text">$54.990</p>
-                        
-                    <div class="column container-product large-text space-between-p">
-                        <label>Costo de envío</label>
-                        <p class="large-text right-text">$5.990</p>
-                    </div>
-                    <div class="column container-product large-text space-between-p ">
-                        <label>TOTAL</label>
-                        <p class="large-text right-text">$60.980</p>
-                    </div>
-                    
-                    <a class="border medium-text center-text primary large-size" href="/payment-process">Pagar</a>
+                <div class="row large-text space-between-p">
+                    <p>Sub-Total</p>
+                    <p class="right-text">$54.990</p>
+                </div>
+                <div class="row container-product large-text space-between-p">
+                    <p>Costo de envío</p>
+                    <p class="large-text right-text">$5.990</p>
+                </div>
+                <div class="row container-product large-text space-between-p ">
+                    <p>Total</p>
+                    <p class="large-text right-text">$60.980</p>
+                </div>
+                <a class="border medium-text center-text primary large-size" href="/payment-process">Pagar</a>
             </div>
         </div>
    
