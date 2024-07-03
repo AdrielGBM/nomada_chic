@@ -177,6 +177,10 @@ input {
   color: #987070;
   opacity: 1;
 }
+.space-between-p {
+  
+    justify-content: space-between;
+}
 
 @media (max-width: 1080px) {
   .header-padding {
@@ -212,6 +216,7 @@ input {
   .grid-one-four {
     grid-template-columns: 34% 66%;
   }
+ 
 }
 
 @media (max-width: 720px) {
@@ -253,4 +258,13 @@ input {
     display: flex;
     flex-direction: column-reverse;
   }
+  .linea-palabras {
+    display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      padding: 10px;
+  }
+  
+
+
 }

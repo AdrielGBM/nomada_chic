@@ -18,7 +18,55 @@
 <body class="primary">
     <main-header-component></main-header-component>
     <main class="column large-padding center">
-        Aquí los productos del carrito de compras
+        <div class="grid-two-one container large-size">
+            <div class="column container large-padding padding border shadow primary">
+                <p class="large-text left-text">CARRITO DE COMPRAS</p>
+                <form class="column container medium-text">
+                    <div class=" row wrap container space shadow">
+                        <label>PRODUCTO</label>
+                        <label>PRECIO</label>
+                        <label>CANTIDAD</label>
+                        <label>SUBTOTAL</label>
+                    </div>
+                    <div class="container shadow">   
+                        <div class=" row wrap space ">   
+                                              
+                        <img class="product" src="assets/images/products/product-1.png" alt="Producto">
+                        <label>$54.990</label>
+                        <div class="small-text secundary " > 
+                        <input type="number" value="0" min="0" max="10" id="quantity-input">
+                        </div>
+                        <label>$54.990</label>
+                        
+                        </div>
+                    <a class="primary right-text">
+                                               <i class= "fa-solid fa-trash-can"></i>
+                    </a>
+                    </div>
+                                                  
+                </form>
+            </div>
+            <div class="column container padding border shadow secondary">
+                <p class="large-text center-text">Resumen de compra</p>
+                
+                    <div class="column large-text space-between-p">
+                        
+                        <p>Sub-Total</p>
+                        <p class="right-text">$54.990</p>
+                        
+                    <div class="column container-product large-text space-between-p">
+                        <label>Costo de envío</label>
+                        <p class="large-text right-text">$5.990</p>
+                    </div>
+                    <div class="column container-product large-text space-between-p ">
+                        <label>TOTAL</label>
+                        <p class="large-text right-text">$60.980</p>
+                    </div>
+                    
+                    <a class="border medium-text center-text primary large-size" href="/payment-process">Pagar</a>
+            </div>
+        </div>
+   
     </main>
     <footer-component></footer-component>
 
