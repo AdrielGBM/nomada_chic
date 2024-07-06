@@ -66,8 +66,16 @@ app.get('/shoppingCartProducts', (req, res) => {
     if (shoppingCart.length != 0) {
         res.send(JSON.stringify(shoppingCart));
     } else {
-        res.send({"message": "Agregue productos al carrito de compras."})
+        res.end()
     }
+})
+
+app.post('/deleteProductFromShoppingCart', (req, res) => {
+    const productId = req.body.productId || "";
+    if (shoppingCart.hasOwnProperty(productId)) {
+        delete shoppingCart[productId];
+    }
+    res.end();
 })
 
 app.listen(port, () => {

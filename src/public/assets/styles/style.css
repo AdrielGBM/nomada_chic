@@ -72,6 +72,11 @@ body {
   border-radius: 20px;
 }
 
+.no-border {
+  border: none;
+  border-radius: 20px;
+}
+
 .shadow {
   box-shadow: 0 0 10px #98707040;
 }
