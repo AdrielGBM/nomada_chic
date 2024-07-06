@@ -6,33 +6,60 @@
         "price": 54990
     },
     "0002": {
-        "name": "Mochila laptop",
+        "name": "Banano",
         "image": "assets/images/products/product-2.png",
-        "price": 54990
+        "description": "Descripción: Banano negro de tamaño mediano, perfecto para llevar tus pertenencias esenciales con estilo y comodidad. Ideal para cualquier ocasión, este banano combina funcionalidad y diseño moderno.",
+        "price": 15990
     },
     "0003": {
-        "name": "Mochila laptop",
-        "image": "assets/images/products/product-1.png",
-        "price": 54990
+        "name": "Banano de cuero",
+        "image": "assets/images/products/product-3.png",
+        "description":" Descripción: Banano café de cuero unisex de tamaño mediano, perfecto para llevar tus pertenencias esenciales con estilo y comodidad. Ideal para cualquier ocasión, este banano combina funcionalidad y un diseño elegante y duradero.",
+        "price": 19990
     },
     "0004": {
-        "name": "Mochila laptop",
-        "image": "assets/images/products/product-2.png",
-        "price": 54990
+        "name": "Bolso con ruedas tipo maleta",
+        "image": "assets/images/products/product-4.png",
+        "description":"Descripción: Bolso negro con ruedas tipo maleta talla L, diseñado para ofrecer la máxima capacidad y comodidad en tus viajes. Con su amplio espacio interior y ruedas de alta resistencia, este bolso combina funcionalidad y estilo, ideal para cualquier aventura",
+        "price": 69990
     },
     "0005": {
-        "name": "Mochila laptop",
-        "image": "assets/images/products/product-1.png",
-        "price": 54990
+        "name": "Bolso negro deportivo",
+        "image": "assets/images/products/product-5.png",
+        "description":" Descripción: Bolso negro deportivo talla M, perfecto para llevar tu equipo de entrenamiento con estilo y comodidad. Con múltiples compartimentos y un diseño duradero, este bolso es ideal para acompañarte en todas tus actividades deportivas.",
+        "price": 17990
     },
     "0006": {
-        "name": "Mochila laptop",
-        "image": "assets/images/products/product-2.png",
-        "price": 54990
+        "name": "Mochila estilo étnico",
+        "image": "assets/images/products/product-6.png",
+         "description":" Descripción: Mochila pequeña de tela con estilo étnico, perfecta para llevar tus pertenencias esenciales con un toque de cultura y autenticidad. Su diseño vibrante y compacto la convierte en una opción ideal para el uso diario y ocasiones especiales.",
+        "price": 22990
     },
     "0007": {
-        "name": "Mochila laptop",
-        "image": "assets/images/products/product-2.png",
-        "price": 54990
+        "name": "Mochila outdoor rosada",
+        "image": "assets/images/products/product-7.png",
+        "description":"Descripción: Mochila tipo outdoor mediana, diseñada para acompañarte en todas tus aventuras al aire libre. Con múltiples compartimentos y materiales resistentes, esta mochila ofrece la combinación perfecta de funcionalidad y durabilidad.",
+        "price": 29990
+    },
+
+    "0008": {
+        "name": "Mochila negra tipo militar",
+        "image": "assets/images/products/product-8.png",
+        "description":" Descripción: Mochila negra tipo militar, diseñada para máxima resistencia y funcionalidad. Con múltiples compartimentos y un diseño robusto, esta mochila es ideal para quienes buscan durabilidad y practicidad en cualquier situación.",
+        "price": 34990
+    },
+    "0009": {
+        "name": "Mochila rosada equipaje personal",
+        "image": "assets/images/products/product-9.png",
+        "description":"Descripción: Mochila rosada ideal para emplearla como equipaje personal de vuelo, diseñada para cumplir con las regulaciones de tamaño de las aerolíneas. Compacta y funcional, esta mochila ofrece múltiples compartimentos para organizar tus pertenencias esenciales con estilo y comodidad",
+        "price": 29990
+    },
+    "0010": {
+        "name": "Mochila de cuero café unisex",
+        "image": "assets/images/products/product-10.png",
+        "description":"Descripción: Esta mochila de cuero café unisex es el accesorio perfecto para cualquier ocasión. Confeccionada con cuero genuino de alta calidad, esta mochila es duradera, elegante y versátil.",
+        "price": 49990
     }
+
+
 }
