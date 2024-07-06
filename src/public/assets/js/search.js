@@ -13,14 +13,28 @@ function getProductList() {
                                 <p class="medium-text">${product.name}</p>
                                 <p class="large-text">${product.price.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'})}</p>
                             </a>
-                            <button class="border medium-text nowrap-text secondary shopping-cart">Añadir al carrito</button>
+                            <button id="${id}" class="border medium-text nowrap-text secondary shopping-cart">Añadir al carrito</button>
                         </div>
                         `
                     }
                 }
+                const buttons = document.querySelectorAll(".shopping-cart")
+                buttons.forEach((button) => {
+                    button.addEventListener("click", addToShoppingCart)
+                })
             })
         }
     })
 }
+
+function addToShoppingCart(event) {
+    const button = event.target;
+    const productId = {"productId": button.id};
+    fetch("http://localhost:3000/addToShoppingCart", {
+        method: "POST",
+        body: JSON.stringify(productId)
+    })
+}
+
 
 window.addEventListener("load", getProductList)
