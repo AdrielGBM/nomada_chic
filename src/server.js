@@ -62,6 +62,14 @@ app.post('/addToShoppingCart', (req, res) => {
     res.end();
 })
 
+app.get('/shoppingCartProducts', (req, res) => {
+    if (shoppingCart.length != 0) {
+        res.send(JSON.stringify(shoppingCart));
+    } else {
+        res.send({"message": "Agregue productos al carrito de compras."})
+    }
+})
+
 app.listen(port, () => {
     console.log("Server started at http://localhost:" + port);
 })
