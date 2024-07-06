@@ -1,0 +1,38 @@
+{
+    "0001": {
+        "name": "Mochila laptop",
+        "image": "assets/images/products/product-1.png",
+        "description": "Descripción: La Mochila Laptop es la solución perfecta para quienes buscan combinar estilo, funcionalidad y protección para su dispositivo electrónico más preciado. Diseñada meticulosamente con materiales duraderos y detalles ergonómicos, esta mochila no solo asegura la seguridad de tu laptop, sino que también optimiza tu comodidad durante todo el día.<br><br>Con compartimentos acolchados específicamente diseñados para laptops de hasta 15 pulgadas, la Mochila Laptop garantiza un ajuste perfecto y una protección superior contra golpes y caídas. Su diseño contemporáneo incluye bolsillos adicionales para organizar cables, adaptadores y otros accesorios, manteniendo todo en orden y al alcance de la mano.<br><br>Además de su funcionalidad, la Mochila Laptop se destaca por su estilo urbano y profesional. Disponible en una variedad de colores modernos y acabados resistentes al agua, esta mochila no solo complementa tu vestimenta diaria, sino que también te permite enfrentar cualquier clima con confianza.<br><br>Características adicionales como correas ajustables y acolchadas para los hombros, junto con un panel trasero transpirable, aseguran una experiencia de transporte cómoda incluso durante largos trayectos. Ya sea que te dirijas a la oficina, a la universidad o a una cafetería para trabajar, la Mochila Laptop es tu compañero ideal para llevar todo lo que necesitas de manera segura y con estilo.",
+        "price": 54990
+    },
+    "0002": {
+        "name": "Mochila laptop",
+        "image": "assets/images/products/product-2.png",
+        "price": 54990
+    },
+    "0003": {
+        "name": "Mochila laptop",
+        "image": "assets/images/products/product-1.png",
+        "price": 54990
+    },
+    "0004": {
+        "name": "Mochila laptop",
+        "image": "assets/images/products/product-2.png",
+        "price": 54990
+    },
+    "0005": {
+        "name": "Mochila laptop",
+        "image": "assets/images/products/product-1.png",
+        "price": 54990
+    },
+    "0006": {
+        "name": "Mochila laptop",
+        "image": "assets/images/products/product-2.png",
+        "price": 54990
+    },
+    "0007": {
+        "name": "Mochila laptop",
+        "image": "assets/images/products/product-2.png",
+        "price": 54990
+    }
+}

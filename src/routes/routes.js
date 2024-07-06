@@ -18,9 +18,10 @@ router.get("/account", (req, res) => {
 router.get("/search", (req, res) => {
     res.sendFile(path.join(__dirname, '../views/search.html'));
 })
-router.get("/detail", (req, res) => {
+router.get("/detail-:productId", (req, res) => { //No funciona "/detail/:productId", busca los archivos en detail en vez de public
     res.sendFile(path.join(__dirname, '../views/detail.html'));
 })
+
 router.get("/shopping-cart", (req, res) => {
     res.sendFile(path.join(__dirname, '../views/shopping-cart.html'));
 })
