@@ -8,7 +8,7 @@ Producto mínimo viable de una página web de venta de bolsos, mochilas y carter
 
 ## Funciones
 ### Página principal
-- Acceso a página principal a través del logo (Recarga la página en este caso)
+- Acceso a página principal a través del logo (Recarga la página en este caso).
 - Acceso a pantalla de búsqueda a través del ícono de lupa (Barra de búsqueda no funcional).
 - Acceso a pantallas de registro e inicio de sesión a través de los botones.
 - Acceso a pantalla de carrito de compras a tráves de su ícono.
