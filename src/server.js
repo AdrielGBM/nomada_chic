@@ -70,6 +70,15 @@ app.get('/shoppingCartProducts', (req, res) => {
     }
 })
 
+app.post('/setProductQuantity', (req, res) => {
+    const productId = req.body.productId || "";
+    const productQuantity = req.body.productQuantity || "";
+    if (shoppingCart.hasOwnProperty(productId)) {
+        shoppingCart[productId].quantity = productQuantity;
+    }
+    res.end();
+})
+
 app.post('/deleteProductFromShoppingCart', (req, res) => {
     const productId = req.body.productId || "";
     if (shoppingCart.hasOwnProperty(productId)) {

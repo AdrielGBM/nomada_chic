@@ -188,12 +188,16 @@ input {
   outline: none;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+  opacity: 1
+}
+
 ::placeholder {
   color: #987070;
   opacity: 1;
 }
+
 .space-between-p {
-  
     justify-content: space-between;
 }
 
