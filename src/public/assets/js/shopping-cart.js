@@ -2,6 +2,7 @@ function getProductList() {
     const shoppingCartProductsDiv = document.getElementById("shopping-cart-products");
     const subtotalP = document.getElementById("subtotal");
     const totalP = document.getElementById("total");
+    const payButton = document.getElementById("pay");
     let subtotal = 0;
 
     fetch("http://localhost:3000/shoppingCartProducts").then((res) => {
@@ -44,6 +45,7 @@ function getProductList() {
                     }
                     subtotalP.innerHTML = subtotal.toLocaleString('es-CL', {style: 'currency', currency: 'CLP'});
                     totalP.innerHTML = (subtotal + 5990).toLocaleString('es-CL', {style: 'currency', currency: 'CLP'});
+                    payButton.addEventListener("click", paymentProcess)
                     const inputs = document.querySelectorAll(".set-quantity")
                     inputs.forEach((input) => {
                         input.addEventListener("input", setProductQuantity)
@@ -138,6 +140,15 @@ function deleteProductFromShoppingCart(event) {
         <p class="medium-text center-text padding">Agregue productos al carrito de compras.</p>
         `;
     }
+}
+
+async function paymentProcess() {
+    const res = await fetch("http://localhost:3000/payment-process", {
+        method: "POST",
+        body: JSON.stringify({"message": "Se está intentando realizar una transacción."})
+    })
+    const data = await res.json()
+    window.location.href = data.url
 }
 
 window.addEventListener("load", getProductList)

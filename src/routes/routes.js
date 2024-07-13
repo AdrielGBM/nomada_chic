@@ -31,5 +31,8 @@ router.get("/payment-process", (req, res) => {
 router.get("/transaction", (req, res) => {
     res.sendFile(path.join(__dirname, '../views/transaction.html'));
 })
+router.get("/cancel", (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/cancel.html'));
+})
 
 module.exports = router;

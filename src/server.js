@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors")
 const fs = require('fs');
+const Stripe = require("stripe")
 const app = express();
 const port = 3000
 
@@ -8,12 +9,13 @@ const routes = require("./routes/routes");
 app.use(routes)
 app.use(express.static("./src/public"));
 
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json({type:"*/*" }))
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json({type:"*/*" }));
 app.use(cors());
 
 let products = JSON.parse(fs.readFileSync("src/product-list.json", "utf8"));
-let shoppingCart = {}
+let shoppingCart = {};
+const stripe = new Stripe("sk_test_51PbooTRru8LiBYYNPfiDYrYBQrKQ1wd6SQJRTMxIw7JW9aWcYGlH4hG0D9x0yGb0O3SWcaD4L7AKntSry03Mqay900zDuclRY1");
 
 app.use("/", routes)
 app.use("/login", routes)
@@ -25,6 +27,7 @@ app.use("/detail-:productId", routes)
 app.use("/shopping-cart", routes)
 app.use("/payment-process", routes)
 app.use("/transaction", routes)
+app.use("/cancel", routes)
 
 app.get('/products', (req, res) => {
     res.send(JSON.stringify(products));
@@ -85,6 +88,45 @@ app.post('/deleteProductFromShoppingCart', (req, res) => {
         delete shoppingCart[productId];
     }
     res.end();
+})
+
+app.post("/payment-process", async (req, res) => {
+    const shoppingCartProducts = []
+    for (const product in shoppingCart) {
+        shoppingCartProducts.push(
+            {
+                price_data: {
+                    product_data: {
+                        name: shoppingCart[product].name,
+                        description: shoppingCart[product].description,
+                    },
+                    currency: 'clp',                    
+                    unit_amount: shoppingCart[product].price,
+                },
+                quantity: shoppingCart[product].quantity,
+            }
+        )
+    }
+    shoppingCartProducts.push(
+        {
+            price_data: {
+                product_data: {
+                    name: "Costo por envío",
+                    description: "Envío a todo Chile.",
+                },
+                currency: 'clp',                    
+                unit_amount: 5990,
+            },
+            quantity: 1,
+        }
+    )
+    const session = await stripe.checkout.sessions.create({
+        line_items: shoppingCartProducts,
+        mode: "payment",
+        success_url:'http://localhost:3000/transaction',
+        cancel_url: 'http://localhost:3000/cancel',
+    })
+    return res.json(session)
 })
 
 app.listen(port, () => {
