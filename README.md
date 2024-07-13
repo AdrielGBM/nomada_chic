@@ -32,12 +32,13 @@ Producto mínimo viable de una página web de venta de bolsos, mochilas y carter
 ### Página de Carrito de compras
 - Barra de navegación con las funciones nombradas anteriormente.
 - Posibilidad de gestionar los productos agregados anteriormente (eliminarlos).
-- Resumen de compra (funcional en próximas actualizaciones).
-- Acceso a pantalla de procesamiento de pago a través del botón.
+- Resumen de compra.
+- Acceso a pantalla de procesamiento de pago a través del botón (requiere agregar productos al carrito).
 
 ### Página de Procesamiento de pago
-- Formularios (no funcionales).
-- Acceso a pantalla de confirmación de la compra a través del botón.
+- Pasarela de pago Stripe en modo de prueba.
+- Posibilidad de realizar transacciones con tarjetas de prueba de Stripe (número de tarjeta 4242424242424242 y completar con datos inventados).
+- Acceso a pantalla de confirmación o rechazo de compra a través del botón.
 
-### Página de Confirmación de compra
+### Página de Confirmación y Rechazo de compra
 - Acceso a la página principal a través del botón.

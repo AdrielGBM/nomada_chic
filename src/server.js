@@ -20,12 +20,11 @@ const stripe = new Stripe("sk_test_51PbooTRru8LiBYYNPfiDYrYBQrKQ1wd6SQJRTMxIw7JW
 app.use("/", routes)
 app.use("/login", routes)
 app.use("/register", routes)
-app.use("/account", routes)
 
 app.use("/search", routes)
 app.use("/detail-:productId", routes)
+
 app.use("/shopping-cart", routes)
-app.use("/payment-process", routes)
 app.use("/transaction", routes)
 app.use("/cancel", routes)
 
@@ -127,6 +126,15 @@ app.post("/payment-process", async (req, res) => {
         cancel_url: 'http://localhost:3000/cancel',
     })
     return res.json(session)
+})
+
+app.get('/deleteShoppingCart', (req, res) => {
+    if (shoppingCart.length != 0) {
+        for (const product in shoppingCart) {
+            delete shoppingCart[product];
+        }
+    }
+    res.end()
 })
 
 app.listen(port, () => {
