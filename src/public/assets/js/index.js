@@ -32,9 +32,19 @@ function getProductList() {
 function addToShoppingCart(event) {
     const button = event.target;
     const productId = {"productId": button.id};
-    fetch("http://localhost:3000/addToShoppingCart", {
-        method: "POST",
-        body: JSON.stringify(productId)
+    fetch("http://localhost:3000/isAuthenticated").then((res) => {
+        if (res.ok) {
+            res.json().then((value) => {
+                if (value) {
+                    fetch("http://localhost:3000/addToShoppingCart", {
+                        method: "POST",
+                        body: JSON.stringify(productId)
+                    })
+                } else {
+                    window.location.href = "http://localhost:3000/login"
+                }
+            })
+        }
     })
 }
 

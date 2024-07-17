@@ -20,9 +20,19 @@ function getProduct() {
 
 function addToShoppingCart() {
     const productId = {"productId": ((window.location.href).split('-'))[1]};
-    fetch("http://localhost:3000/addToShoppingCart", {
-        method: "POST",
-        body: JSON.stringify(productId)
+    fetch("http://localhost:3000/isAuthenticated").then((res) => {
+        if (res.ok) {
+            res.json().then((value) => {
+                if (value) {
+                    fetch("http://localhost:3000/addToShoppingCart", {
+                        method: "POST",
+                        body: JSON.stringify(productId)
+                    })
+                } else {
+                    window.location.href = "http://localhost:3000/login"
+                }
+            })
+        }
     })
 }
 

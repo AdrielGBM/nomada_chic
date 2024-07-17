@@ -4,8 +4,10 @@ const fs = require('fs');
 const Stripe = require("stripe")
 const app = express();
 const port = 3000
+const stripe = new Stripe("sk_test_51PbooTRru8LiBYYNPfiDYrYBQrKQ1wd6SQJRTMxIw7JW9aWcYGlH4hG0D9x0yGb0O3SWcaD4L7AKntSry03Mqay900zDuclRY1");
 
 const routes = require("./routes/routes");
+const { send } = require("process");
 app.use(routes)
 app.use(express.static("./src/public"));
 
@@ -14,8 +16,8 @@ app.use(express.json({type:"*/*" }));
 app.use(cors());
 
 let products = JSON.parse(fs.readFileSync("src/product-list.json", "utf8"));
+let isAuthenticated = false;
 let shoppingCart = {};
-const stripe = new Stripe("sk_test_51PbooTRru8LiBYYNPfiDYrYBQrKQ1wd6SQJRTMxIw7JW9aWcYGlH4hG0D9x0yGb0O3SWcaD4L7AKntSry03Mqay900zDuclRY1");
 
 app.use("/", routes)
 app.use("/login", routes)
@@ -40,6 +42,15 @@ app.get('/product/:productId', (req, res) => {
             break;
         }
     }
+})
+
+app.get("/isAuthenticated", (req, res) => {
+    res.send(JSON.stringify(isAuthenticated));
+})
+
+app.get("/authenticate", (req, res) => { //No necesita ser POST ya que los formularios no son funcionales
+    isAuthenticated = true;
+    res.end();
 })
 
 app.post('/addToShoppingCart', (req, res) => {

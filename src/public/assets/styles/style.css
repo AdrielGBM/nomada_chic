@@ -173,9 +173,19 @@ body {
   color: #987070;
 }
 
+button.primary:active {
+  background-color: #987070;
+  color: #F1E5D1;
+}
+
 .secondary {
   background-color: #987070;
   color: #F1E5D1;
+}
+
+button.secondary:active {
+  background-color: #F1E5D1;
+  color: #987070;
 }
 
 .textfield {

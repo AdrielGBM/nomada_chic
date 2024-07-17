@@ -5,6 +5,16 @@ function getProductList() {
     const payButton = document.getElementById("pay");
     let subtotal = 0;
 
+    fetch("http://localhost:3000/isAuthenticated").then((res) => {
+        if (res.ok) {
+            res.json().then((value) => {
+                if (!value) {
+                    window.location.href = "http://localhost:3000/login"
+                }
+            })
+        }
+    })
+
     fetch("http://localhost:3000/shoppingCartProducts").then((res) => {
         if (res.ok) {
             res.json().then((products) => {
