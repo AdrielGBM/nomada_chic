@@ -1,3 +1,4 @@
+const ip = "localhost"
 function getProductList() {
     const shoppingCartProductsDiv = document.getElementById("shopping-cart-products");
     const subtotalP = document.getElementById("subtotal");
@@ -5,17 +6,17 @@ function getProductList() {
     const payButton = document.getElementById("pay");
     let subtotal = 0;
 
-    fetch("http://localhost:3000/isAuthenticated").then((res) => {
+    fetch(`http://${ip}:3000/isAuthenticated`).then((res) => {
         if (res.ok) {
             res.json().then((value) => {
                 if (!value) {
-                    window.location.href = "http://localhost:3000/login"
+                    window.location.href = `http://${ip}:3000/login`
                 }
             })
         }
     })
 
-    fetch("http://localhost:3000/shoppingCartProducts").then((res) => {
+    fetch(`http://${ip}:3000/shoppingCartProducts`).then((res) => {
         if (res.ok) {
             res.json().then((products) => {
                 if (Object.keys(products).length === 0) {
@@ -75,7 +76,7 @@ function addProductQuantity(id, quantity) {
         "productId": id,
         "productQuantity": quantity
     };
-    fetch("http://localhost:3000/setProductQuantity", {
+    fetch(`http://${ip}:3000/setProductQuantity`, {
         method: "POST",
         body: JSON.stringify(product)
     })
@@ -94,7 +95,7 @@ function setProductQuantity(event) {
         "productId": productId,
         "productQuantity": productQuantity
     };
-    fetch("http://localhost:3000/setProductQuantity", {
+    fetch(`http://${ip}:3000/setProductQuantity`, {
         method: "POST",
         body: JSON.stringify(product)
     })
@@ -104,7 +105,7 @@ function setProductQuantity(event) {
 function setProductSubTotal(id, quantity) {
     const productQuantity = document.getElementById(`${id}-quantity`);
     const productSubTotal = document.getElementById(`${id}-subtotal`);
-    fetch(`http://localhost:3000/product/${id}`).then((res) => {
+    fetch(`http://${ip}:3000/product/${id}`).then((res) => {
         if (res.ok) {
             res.json().then((product) => {
                 productQuantity.value = quantity
@@ -119,7 +120,7 @@ function setSummaryPrices() {
     const subtotalP = document.getElementById("subtotal");
     const totalP = document.getElementById("total");
     let subtotal = 0;
-    fetch("http://localhost:3000/shoppingCartProducts").then((res) => {
+    fetch(`http://${ip}:3000/shoppingCartProducts`).then((res) => {
         if (res.ok) {
             res.json().then((products) => {
                 for (const id in products) {
@@ -140,7 +141,7 @@ function deleteProductFromShoppingCart(event) {
     const shoppingCartProductsDiv = document.getElementById("shopping-cart-products");
     const button = event.target.closest(".no-border");
     const productId = {"productId": button.id};
-    fetch("http://localhost:3000/deleteProductFromShoppingCart", {
+    fetch(`http://${ip}:3000/deleteProductFromShoppingCart`, {
         method: "POST",
         body: JSON.stringify(productId)
     })
@@ -153,7 +154,7 @@ function deleteProductFromShoppingCart(event) {
 }
 
 async function paymentProcess() {
-    const res = await fetch("http://localhost:3000/payment-process", {
+    const res = await fetch(`http://${ip}:3000/payment-process`, {
         method: "POST",
         body: JSON.stringify({"message": "Se está intentando realizar una transacción."})
     })

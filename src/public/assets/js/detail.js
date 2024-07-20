@@ -1,3 +1,4 @@
+const ip = "localhost"
 function getProduct() {
     const productId = ((window.location.href).split('-'))[1];
     const productName = document.getElementById("product-name")
@@ -5,7 +6,7 @@ function getProduct() {
     const productDescription = document.getElementById("product-description")
     const productPrice = document.getElementById("product-price")
     const productButton = document.getElementById("product-button")
-    fetch(`http://localhost:3000/product/${productId}`).then((res) => {
+    fetch(`http://${ip}:3000/product/${productId}`).then((res) => {
         if (res.ok) {
             res.json().then((product) => {
                 productName.innerHTML = product.name
@@ -20,16 +21,16 @@ function getProduct() {
 
 function addToShoppingCart() {
     const productId = {"productId": ((window.location.href).split('-'))[1]};
-    fetch("http://localhost:3000/isAuthenticated").then((res) => {
+    fetch(`http://${ip}:3000/isAuthenticated`).then((res) => {
         if (res.ok) {
             res.json().then((value) => {
                 if (value) {
-                    fetch("http://localhost:3000/addToShoppingCart", {
+                    fetch(`http://${ip}:3000/addToShoppingCart`, {
                         method: "POST",
                         body: JSON.stringify(productId)
                     })
                 } else {
-                    window.location.href = "http://localhost:3000/login"
+                    window.location.href = `http://${ip}:3000/login`
                 }
             })
         }

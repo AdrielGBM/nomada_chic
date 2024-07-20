@@ -3,6 +3,7 @@ const cors = require("cors")
 const fs = require('fs');
 const Stripe = require("stripe")
 const app = express();
+const ip = "localhost" //Para ver en todos los dispositivos de la red poner la ip aquí y en los siguientes archivos: detail.js, index.js, login.js, register.js, search.js, shopping-cart.js y transaction.js
 const port = 3000
 const stripe = new Stripe("sk_test_51PbooTRru8LiBYYNPfiDYrYBQrKQ1wd6SQJRTMxIw7JW9aWcYGlH4hG0D9x0yGb0O3SWcaD4L7AKntSry03Mqay900zDuclRY1");
 
@@ -133,8 +134,8 @@ app.post("/payment-process", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         line_items: shoppingCartProducts,
         mode: "payment",
-        success_url:'http://localhost:3000/transaction',
-        cancel_url: 'http://localhost:3000/cancel',
+        success_url:`http://${ip}:3000/transaction`,
+        cancel_url: `http://${ip}:3000/cancel`,
     })
     return res.json(session)
 })
@@ -149,5 +150,5 @@ app.get('/deleteShoppingCart', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("Server started at http://localhost:" + port);
+    console.log(`Server started at http://${ip}:${port}`);
 })

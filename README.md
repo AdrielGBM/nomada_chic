@@ -3,8 +3,9 @@ Producto mínimo viable de una página web de venta de bolsos, mochilas y carter
 
 ## Instrucciones
 1. Clonar el repositorio y abrir la carpeta con VS Code
+2. (Opcional) Para abrir la página web en varios dispositivos, modificar la variable ip del server.js y los archivos nombrados ahí. Se debe poner la ip del dispositivo en que se levantará el servidor (ver con el comando ipconfig en la terminal)
 2. Levantar el servidor local en la terminal con el comando *npm run dev*
-3. Abrir la dirección mostrada en la terminal en un navegador *http://localhost:3000*
+3. Abrir la dirección mostrada en la terminal en un navegador (por defecto *http://localhost:3000*)
 
 ## Funciones
 ### Página principal

@@ -1,7 +1,8 @@
+const ip = "localhost"
 function getProductList() {
     const featuredProductsDiv = document.getElementById("featured-products")
     let cont = 0
-    fetch("http://localhost:3000/products").then((res) => {
+    fetch(`http://${ip}:3000/products`).then((res) => {
         if (res.ok) {
             res.json().then((products) => {
                 for (const id in products) {
@@ -32,16 +33,16 @@ function getProductList() {
 function addToShoppingCart(event) {
     const button = event.target;
     const productId = {"productId": button.id};
-    fetch("http://localhost:3000/isAuthenticated").then((res) => {
+    fetch(`http://${ip}:3000/isAuthenticated`).then((res) => {
         if (res.ok) {
             res.json().then((value) => {
                 if (value) {
-                    fetch("http://localhost:3000/addToShoppingCart", {
+                    fetch(`http://${ip}:3000/addToShoppingCart`, {
                         method: "POST",
                         body: JSON.stringify(productId)
                     })
                 } else {
-                    window.location.href = "http://localhost:3000/login"
+                    window.location.href = `http://${ip}:3000/login`
                 }
             })
         }

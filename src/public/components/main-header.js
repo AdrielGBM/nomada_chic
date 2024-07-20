@@ -1,7 +1,7 @@
 class MainHeader extends HTMLElement {
     constructor() {
         super();
-        fetch("http://localhost:3000/isAuthenticated").then((res) => {
+        fetch(`http://${ip}:3000/isAuthenticated`).then((res) => {
             if (res.ok) {
                 res.json().then((value) => {
                     if (value) {

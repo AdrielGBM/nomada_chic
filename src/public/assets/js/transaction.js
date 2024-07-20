@@ -1,5 +1,6 @@
+const ip = "localhost"
 function deleteShoppingCart() {
-    fetch(`http://localhost:3000/deleteShoppingCart`).then((res) => {
+    fetch(`http://${ip}:3000/deleteShoppingCart`).then((res) => {
     })
 }
 
