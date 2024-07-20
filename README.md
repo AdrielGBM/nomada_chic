@@ -12,9 +12,9 @@ Producto mínimo viable de una página web de venta de bolsos, mochilas y carter
 - Acceso a página principal a través del logo (Recarga la página en este caso).
 - Acceso a pantalla de búsqueda a través del ícono de lupa (Barra de búsqueda no funcional).
 - Acceso a pantallas de registro e inicio de sesión a través de los botones.
-- Acceso a pantalla de carrito de compras a tráves de su ícono.
+- Acceso a pantalla de carrito de compras a tráves de su ícono (el usuario debe estar autenticado).
 - Acceso a pantallas de detalle de producto haciendo clic en cada producto.
-- Posibilidad de añadir productos al carrito a través de los botones de cada producto.
+- Posibilidad de añadir productos al carrito a través de los botones de cada producto (el usuario debe estar autenticado).
 
 ### Página de Búsqueda
 - Barra de navegación con las funciones nombradas anteriormente.
@@ -23,14 +23,15 @@ Producto mínimo viable de una página web de venta de bolsos, mochilas y carter
 
 ### Página de Registro e Inicio de sesión
 - Formulario (no funcional).
-- Acceso a la página principal a través de los botones.
+- Contacta al servidor para autenticarte a través de los botones y te redirige a la página principal.
 - Posibilidad de intercambiar página al presionar el enlace inferior.
 
 ### Página de Detalle de producto
 - Barra de navegación con las funciones nombradas anteriormente.
-- Posibilidad de añadir el producto al carrito a través del botón.
+- Posibilidad de añadir el producto al carrito a través del botón (el usuario debe estar autenticado).
 
 ### Página de Carrito de compras
+- Autenticación requerida (se redirigirá a la pantalla de inicio de sesión si no está autenticado)
 - Barra de navegación con las funciones nombradas anteriormente.
 - Posibilidad de gestionar los productos agregados anteriormente (eliminarlos).
 - Resumen de compra.
